@@ -6,6 +6,7 @@ public class factorial_de_numeros {
 
     int num = entrada.nextInt();
     int factorial = 1;
+//calcula el factorial de un numero dado
 for (int i = 1; i <= num; i++) {
     factorial *= i;
 }
