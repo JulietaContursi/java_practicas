@@ -10,6 +10,7 @@ public class desafioImca {
     int[] vectorPar = new int[maxtam];
     int[] vectorImpar = new int[maxtam];
 
+    //recorre ambos vectores cargandolos con numeros aleatorios del 11 al 20 
     Random rnd = new Random();
     for (int i = 0; i < maxtam; i++) {
       vectorPar[i] = 11 + rnd.nextInt(10);
