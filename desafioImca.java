@@ -18,7 +18,5 @@ public class desafioImca {
 
     System.out.println(Arrays.toString(vectorPar));
     System.out.println(Arrays.toString(vectorImpar));
-
-    
   }
 }
