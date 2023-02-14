@@ -43,3 +43,4 @@ public class desafioImca {
 System.out.println("en este vector hay tantos numeros impares " + IMPARES);
 }
 }
+
