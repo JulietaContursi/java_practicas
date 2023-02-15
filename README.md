@@ -1,1 +1,0 @@
-Repositorio destinado a la practica de java con diferentes ejercicios 
