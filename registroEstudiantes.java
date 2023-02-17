@@ -10,18 +10,36 @@ import java.util.Scanner;
 public class registroEstudiantes {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Ingrese su nombre y apellido para registrarse: ");
         String estudiante = sc.nextLine();
 
+        nombreUsuario(estudiante);
+
         System.out.println("Perfecto! Ahora ingrese su numero de DNI separado por puntos: ");
         String dniEstudiante = sc.nextLine();
+       }
 
-        String[] nomUsuario = estudiante.split(" ");
+     public static void nombreUsuario(String estudiante){
 
-        
+        String[] partes = estudiante.split(" ");
+        String[] nombre = new String[partes.length/2];
+        String[] apellido = new String[partes.length - nombre.length];
 
-}
+        for (int i = 0; i < nombre.length; i++) {
+            nombre[i] = partes[i]; //nombres toma el valor que le ingreso el usuario
+        }
+        for (int i = 0; i < apellido.length; i++) {
+            apellido[i] = partes[nombre.length + i]; 
+            apellido[i] = apellido[i].toLowerCase(); // convierte el apellido actual a minúsculas
+        }
+        for (int i = 0; i < nombre.length; i++) {
+            String usuario = nombre[i].substring(0, 1); 
+            usuario = usuario.toLowerCase(); // convierte la primera letra del nombre actual a minúsculas
+            String correo = usuario + apellido[i] + "@frsf.utn.edu.ar"; // crea el correo electrónico
+            System.out.println(correo); // imprime el correo electrónico
+        }
+    }
+    }
 
-}
+
 
