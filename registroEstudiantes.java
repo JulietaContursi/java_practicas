@@ -2,7 +2,7 @@
 El estudiante ingresará en primer lugar su nombre y apellido (en una misma línea), y en segundo lugar su número de DNI (con puntos). 
 Como resultado, el programa le devolverá:
 - Un nombre de usuario compuesto por la primera letra del nombre, seguida del apellido completo, y que finaliza en @frsf.utn.edu.ar
-- Una contraseña que se compone de las dos últimas letras del apellido, seguida de las últimas cuatro cifras del DNI en orden inverso. */
+- Una contraseña que se compone de las dos últimas letras del apellido, seguida de las últimas tres cifras del DNI en orden inverso. */
 
 import java.util.Scanner;
 
@@ -12,14 +12,14 @@ public class registroEstudiantes {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese su nombre y apellido para registrarse: ");
         String estudiante = sc.nextLine();
-
-        nombreUsuario(estudiante);
-
         System.out.println("Perfecto! Ahora ingrese su numero de DNI separado por puntos: ");
         String dniEstudiante = sc.nextLine();
+
+        nombreUsuario(estudiante, dniEstudiante);
+
        }
 
-     public static void nombreUsuario(String estudiante){
+     public static void nombreUsuario(String estudiante, String dniEstudiante){
 
         String[] partes = estudiante.split(" ");
         String[] nombre = new String[partes.length/2];
@@ -36,10 +36,19 @@ public class registroEstudiantes {
             String usuario = nombre[i].substring(0, 1); 
             usuario = usuario.toLowerCase(); // convierte la primera letra del nombre actual a minúsculas
             String correo = usuario + apellido[i] + "@frsf.utn.edu.ar"; // crea el correo electrónico
-            System.out.println(correo); // imprime el correo electrónico
+            System.out.println(correo);
         }
+        String ultimasLetrasApellido = "";
+        for (int i = 0; i < apellido.length; i++) {
+            apellido[i] = partes[nombre.length + i];
+            String apellidoMin = apellido[i].toLowerCase();
+            ultimasLetrasApellido = apellido[i].substring(apellido[i].length() - 2);
+        }
+            String ultimasCuatroCifras = dniEstudiante.substring(dniEstudiante.length() - 3);
+            String cifrasInvertidas = "";
+            for (int i = ultimasCuatroCifras.length() - 1; i >= 0; i--) {
+                 cifrasInvertidas += ultimasCuatroCifras.charAt(i);
     }
+    System.out.println(ultimasLetrasApellido + cifrasInvertidas); 
     }
-
-
-
+}
