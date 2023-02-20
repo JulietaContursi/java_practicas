@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.Random;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class tecnicoEmpresa {
 
@@ -27,8 +30,7 @@ public class tecnicoEmpresa {
 
         if (opcion == 1) {
             System.out.println("aca ingresarias la lista ");
-            mostrarMenu();
-        } else 
+        }
         if (opcion == 2) {
             System.out.println("aca verias las comisiones");
             mostrarMenu();
@@ -36,11 +38,13 @@ public class tecnicoEmpresa {
         if (opcion == 3) {
             System.out.println("aca verias el servicio estrella");
         } else 
-        if {
-            System.out.println("Opción no válida. Introduce una opción válida.");
-            mostrarMenu();
+        if (opcion == 4){
+            System.out.println("No hay nada mas que ver aca");
         }
     }
+    int[] costoServicio = new int[4];
+    int[] servicioPrestado = new int[4];
+
 }
 
 
