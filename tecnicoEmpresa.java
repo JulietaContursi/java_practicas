@@ -7,6 +7,7 @@ public class tecnicoEmpresa {
 
     public static void main(String[] args) {
         boolean salir = false;
+        ingresarLista();
         do {
             mostrarMenu();
             Scanner sc = new Scanner(System.in);
@@ -42,10 +43,18 @@ public class tecnicoEmpresa {
             System.out.println("No hay nada mas que ver aca");
         }
     }
-    int[] costoServicio = new int[4];
-    int[] servicioPrestado = new int[4];
 
+    public static void ingresarLista(){
+    Random rnd = new Random();
+    int[][] costoServicio = new int[2][4];
+    int[][] servicioPrestado = new int[2][4];{
+    //recorre la matroz para llenar los servicios prestados por cada tecnico 
+    for (int i = 0; i < 3; i++) {
+        for(int j=0;j <3 ; j++){
+        costoServicio[i][i] = rnd.nextInt();
+        servicioPrestado[j][i] = rnd.nextInt();
+        }
+      }
+    }
 }
-
-
-
+}
