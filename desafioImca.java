@@ -48,3 +48,5 @@ public class desafioImca {
     System.out.println("Vector impar con las condiciones: " + Arrays.toString(vectorImpar));
   }
 }
+
+//tengo que revisarlo y rehacerlo
