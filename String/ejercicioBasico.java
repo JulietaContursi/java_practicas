@@ -1,6 +1,3 @@
-//Crea una matriz de 4 filas y 2 columnas, y pide al usuario que ingrese los valores para cada elemento de la matriz.
-// Luego, imprime la matriz en la consola
-
 package String;
 
 import java.util.Scanner;
@@ -12,8 +9,26 @@ public class ejercicioBasico {
         int[][] matriz = new int[4][2];
 
         //se pide al usuario que ingrese los valores para llenar la matriz
-
-
-
+           for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print("Ingrese el valor para la posición [" + i + "][" + j + "]: ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+         // Copiar los valores de la matriz a un nuevo arreglo de vectores
+         int[][] vectores = new int[4][2];
+         for (int i = 0; i < matriz.length; i++) {
+             vectores[i][0] = matriz[i][0];
+             vectores[i][1] = matriz[i][1];
+         }
+         // Imprimir los valores del arreglo de vectores
+        for (int i = 0; i < vectores.length; i++) {
+            System.out.print("Vector " + i + ": ");
+            for (int j = 0; j < vectores[0].length; j++) {
+                System.out.print(vectores[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
+  

@@ -6,8 +6,9 @@ import java.util.ArrayList;
 public class tecnicoEmpresa {
 
     public static void main(String[] args) {
-        boolean salir = false;
         ingresarLista();
+       
+        boolean salir = false;
         do {
             mostrarMenu();
             Scanner sc = new Scanner(System.in);
