@@ -23,7 +23,7 @@ public class ejercicioBasico {
          }
          // Imprimir los valores del arreglo de vectores
         for (int i = 0; i < vectores.length; i++) {
-            System.out.print("Vector " + i + ": ");
+            System.out.print(i);
             for (int j = 0; j < vectores[0].length; j++) {
                 System.out.print(vectores[i][j] + " ");
             }
