@@ -25,7 +25,7 @@ public class ejercicioBasico {
         for (int i = 0; i < vectores.length; i++) {
             System.out.print(i);
             for (int j = 0; j < vectores[0].length; j++) {
-                System.out.print(vectores[i][j] + " ");
+                System.out.print(" " + vectores[i][j] + " ");
             }
             System.out.println();
         }
