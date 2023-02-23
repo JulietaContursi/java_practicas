@@ -1,7 +1,7 @@
 package Bucles;
 import java.util.Scanner;
 
-public class factorial_de_numeros {
+public class factorialDeNumeros {
     public static void main(String[] args) {
     Scanner entrada = new Scanner(System.in);
 
@@ -15,4 +15,3 @@ System.out.println("El factorial de " + num + " es " + factorial);
 
     }
 }
-
