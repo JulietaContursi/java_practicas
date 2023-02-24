@@ -39,14 +39,14 @@ public class candyCrush {
         System.out.println("La columna con más azules es la: " + maxAzules);
 
         //buscamos si en la primer fila hay verdes o no
-          boolean hayNumero4 = false;
+          boolean hayColorverde = false;
           for (int j = 0; j < 5; j++) {
               if (matriz[0][j] == 4) {
-                  hayNumero4 = true;
+                hayColorverde = true;
                   break;
               }
           }
-          if (hayNumero4) {
+          if (hayColorverde) {
               System.out.println("Hay color verde en la fila 1");
           } else {
               System.out.println("No hay ningun color verde en la fila 1");
